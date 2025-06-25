@@ -1,5 +1,6 @@
 local gui = Instance.new('ScreenGui')
 gui.Parent = game.Players.LocalPlayer.PlayerGui
+gui.Name = 'MakeScript'
 
 local Window_1 = Instance.new("Frame")
 Window_1.Name = "Window"
@@ -240,101 +241,128 @@ UICorner_20.Name = "UICorner"
 UICorner_20.Parent = GiveTPtool_19
 UICorner_20.CornerRadius = UDim.new(0, 8)
 
-local BottomGridLayout_21 = Instance.new("Frame")
-BottomGridLayout_21.Name = "BottomGridLayout"
-BottomGridLayout_21.Parent = Window_1
-BottomGridLayout_21.Size = UDim2.new(1, 0, 0, 40)
-BottomGridLayout_21.Position = UDim2.new(0, 0, 1, -40)
-BottomGridLayout_21.BackgroundColor3 = Color3.new(0, 0, 0)
-BottomGridLayout_21.BackgroundTransparency = 1
-BottomGridLayout_21.ZIndex = 1
-BottomGridLayout_21.Rotation = 0
-BottomGridLayout_21.Visible = true
-BottomGridLayout_21.BorderSizePixel = 0
-BottomGridLayout_21.AnchorPoint = Vector2.new(0, 0)
+local Anchor_21 = Instance.new("TextButton")
+Anchor_21.Name = "Anchor"
+Anchor_21.Parent = TopGridLayout_10
+Anchor_21.Size = UDim2.new(0, 26, 1, 0)
+Anchor_21.Position = UDim2.new(1, -26, 0, 0)
+Anchor_21.BackgroundColor3 = Color3.new(1, 0, 0)
+Anchor_21.BackgroundTransparency = 0
+Anchor_21.ZIndex = 1
+Anchor_21.Rotation = 0
+Anchor_21.Visible = true
+Anchor_21.BorderSizePixel = 0
+Anchor_21.AnchorPoint = Vector2.new(0, 0)
+Anchor_21.Text = "Anchor"
+Anchor_21.TextSize = 12
+Anchor_21.TextColor3 = Color3.new(1, 1, 1)
+Anchor_21.Font = Enum.Font.FredokaOne
+Anchor_21.TextWrapped = true
+Anchor_21.TextScaled = false
+Anchor_21.TextTransparency = 0
 
-local UIGridLayout_22 = Instance.new("UIGridLayout")
-UIGridLayout_22.Name = "UIGridLayout"
-UIGridLayout_22.Parent = BottomGridLayout_21
-UIGridLayout_22.CellSize = UDim2.new(0, 75, 0, 25)
-UIGridLayout_22.CellPadding = UDim2.new(0, 10, 0, 10)
-UIGridLayout_22.FillDirection = Enum.FillDirection.Horizontal
-UIGridLayout_22.HorizontalAlignment = Enum.HorizontalAlignment.Left
-UIGridLayout_22.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_22.VerticalAlignment = Enum.VerticalAlignment.Top
+local UICorner_22 = Instance.new("UICorner")
+UICorner_22.Name = "UICorner"
+UICorner_22.Parent = Anchor_21
+UICorner_22.CornerRadius = UDim.new(0, 8)
 
-local UIPadding_23 = Instance.new("UIPadding")
-UIPadding_23.Name = "UIPadding"
-UIPadding_23.Parent = BottomGridLayout_21
-UIPadding_23.PaddingTop = UDim.new(0, 10)
-UIPadding_23.PaddingBottom = UDim.new(0, 10)
-UIPadding_23.PaddingLeft = UDim.new(0, 10)
-UIPadding_23.PaddingRight = UDim.new(0, 10)
+local BottomGridLayout_23 = Instance.new("Frame")
+BottomGridLayout_23.Name = "BottomGridLayout"
+BottomGridLayout_23.Parent = Window_1
+BottomGridLayout_23.Size = UDim2.new(1, 0, 0, 40)
+BottomGridLayout_23.Position = UDim2.new(0, 0, 1, -40)
+BottomGridLayout_23.BackgroundColor3 = Color3.new(0, 0, 0)
+BottomGridLayout_23.BackgroundTransparency = 1
+BottomGridLayout_23.ZIndex = 1
+BottomGridLayout_23.Rotation = 0
+BottomGridLayout_23.Visible = true
+BottomGridLayout_23.BorderSizePixel = 0
+BottomGridLayout_23.AnchorPoint = Vector2.new(0, 0)
 
-local Walkspeed_24 = Instance.new("TextBox")
-Walkspeed_24.Name = "Walkspeed"
-Walkspeed_24.Parent = BottomGridLayout_21
-Walkspeed_24.Size = UDim2.new(0, 200, 0, 50)
-Walkspeed_24.Position = UDim2.new(0, 0, 0, 0)
-Walkspeed_24.BackgroundColor3 = Color3.new(0, 0, 0)
-Walkspeed_24.BackgroundTransparency = 0
-Walkspeed_24.ZIndex = 1
-Walkspeed_24.Rotation = 0
-Walkspeed_24.Visible = true
-Walkspeed_24.BorderSizePixel = 0
-Walkspeed_24.AnchorPoint = Vector2.new(0, 0)
-Walkspeed_24.Text = ""
-Walkspeed_24.TextSize = 12
-Walkspeed_24.TextColor3 = Color3.new(1, 1, 1)
-Walkspeed_24.Font = Enum.Font.FredokaOne
-Walkspeed_24.TextWrapped = false
-Walkspeed_24.TextScaled = false
-Walkspeed_24.TextTransparency = 0
-Walkspeed_24.PlaceholderText = "Walkspeed"
+local UIGridLayout_24 = Instance.new("UIGridLayout")
+UIGridLayout_24.Name = "UIGridLayout"
+UIGridLayout_24.Parent = BottomGridLayout_23
+UIGridLayout_24.CellSize = UDim2.new(0, 75, 0, 25)
+UIGridLayout_24.CellPadding = UDim2.new(0, 10, 0, 10)
+UIGridLayout_24.FillDirection = Enum.FillDirection.Horizontal
+UIGridLayout_24.HorizontalAlignment = Enum.HorizontalAlignment.Left
+UIGridLayout_24.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_24.VerticalAlignment = Enum.VerticalAlignment.Top
 
-local UICorner_25 = Instance.new("UICorner")
-UICorner_25.Name = "UICorner"
-UICorner_25.Parent = Walkspeed_24
-UICorner_25.CornerRadius = UDim.new(0, 8)
+local UIPadding_25 = Instance.new("UIPadding")
+UIPadding_25.Name = "UIPadding"
+UIPadding_25.Parent = BottomGridLayout_23
+UIPadding_25.PaddingTop = UDim.new(0, 10)
+UIPadding_25.PaddingBottom = UDim.new(0, 10)
+UIPadding_25.PaddingLeft = UDim.new(0, 10)
+UIPadding_25.PaddingRight = UDim.new(0, 10)
 
-local JumpPower_26 = Instance.new("TextBox")
-JumpPower_26.Name = "Jump Power"
-JumpPower_26.Parent = BottomGridLayout_21
-JumpPower_26.Size = UDim2.new(0, 200, 0, 50)
-JumpPower_26.Position = UDim2.new(0, 0, 0, 0)
-JumpPower_26.BackgroundColor3 = Color3.new(0, 0, 0)
-JumpPower_26.BackgroundTransparency = 0
-JumpPower_26.ZIndex = 1
-JumpPower_26.Rotation = 0
-JumpPower_26.Visible = true
-JumpPower_26.BorderSizePixel = 0
-JumpPower_26.AnchorPoint = Vector2.new(0, 0)
-JumpPower_26.Text = ""
-JumpPower_26.TextSize = 12
-JumpPower_26.TextColor3 = Color3.new(1, 1, 1)
-JumpPower_26.Font = Enum.Font.FredokaOne
-JumpPower_26.TextWrapped = false
-JumpPower_26.TextScaled = false
-JumpPower_26.TextTransparency = 0
-JumpPower_26.PlaceholderText = "Jump Power"
+local Walkspeed_26 = Instance.new("TextBox")
+Walkspeed_26.Name = "Walkspeed"
+Walkspeed_26.Parent = BottomGridLayout_23
+Walkspeed_26.Size = UDim2.new(0, 200, 0, 50)
+Walkspeed_26.Position = UDim2.new(0, 0, 0, 0)
+Walkspeed_26.BackgroundColor3 = Color3.new(0, 0, 0)
+Walkspeed_26.BackgroundTransparency = 0
+Walkspeed_26.ZIndex = 1
+Walkspeed_26.Rotation = 0
+Walkspeed_26.Visible = true
+Walkspeed_26.BorderSizePixel = 0
+Walkspeed_26.AnchorPoint = Vector2.new(0, 0)
+Walkspeed_26.Text = ""
+Walkspeed_26.TextSize = 12
+Walkspeed_26.TextColor3 = Color3.new(1, 1, 1)
+Walkspeed_26.Font = Enum.Font.FredokaOne
+Walkspeed_26.TextWrapped = false
+Walkspeed_26.TextScaled = false
+Walkspeed_26.TextTransparency = 0
+Walkspeed_26.PlaceholderText = "Walkspeed"
+Walkspeed_26.ClearTextOnFocus = false
 
 local UICorner_27 = Instance.new("UICorner")
 UICorner_27.Name = "UICorner"
-UICorner_27.Parent = JumpPower_26
+UICorner_27.Parent = Walkspeed_26
 UICorner_27.CornerRadius = UDim.new(0, 8)
 
-local BottomSeperator_28 = Instance.new("Frame")
-BottomSeperator_28.Name = "Bottom Seperator"
-BottomSeperator_28.Parent = Window_1
-BottomSeperator_28.Size = UDim2.new(1, 0, -0.007604559883475304, 0)
-BottomSeperator_28.Position = UDim2.new(0, 0, 1, -40)
-BottomSeperator_28.BackgroundColor3 = Color3.new(0.7568627595901489, 0.7568627595901489, 0.7568627595901489)
-BottomSeperator_28.BackgroundTransparency = 0
-BottomSeperator_28.ZIndex = 1
-BottomSeperator_28.Rotation = 0
-BottomSeperator_28.Visible = true
-BottomSeperator_28.BorderSizePixel = 0
-BottomSeperator_28.AnchorPoint = Vector2.new(0, 0)
+local JumpPower_28 = Instance.new("TextBox")
+JumpPower_28.Name = "Jump Power"
+JumpPower_28.Parent = BottomGridLayout_23
+JumpPower_28.Size = UDim2.new(0, 200, 0, 50)
+JumpPower_28.Position = UDim2.new(0, 0, 0, 0)
+JumpPower_28.BackgroundColor3 = Color3.new(0, 0, 0)
+JumpPower_28.BackgroundTransparency = 0
+JumpPower_28.ZIndex = 1
+JumpPower_28.Rotation = 0
+JumpPower_28.Visible = true
+JumpPower_28.BorderSizePixel = 0
+JumpPower_28.AnchorPoint = Vector2.new(0, 0)
+JumpPower_28.Text = ""
+JumpPower_28.TextSize = 12
+JumpPower_28.TextColor3 = Color3.new(1, 1, 1)
+JumpPower_28.Font = Enum.Font.FredokaOne
+JumpPower_28.TextWrapped = false
+JumpPower_28.TextScaled = false
+JumpPower_28.TextTransparency = 0
+JumpPower_28.PlaceholderText = "Jump Power"
+JumpPower_28.ClearTextOnFocus = false
+
+local UICorner_29 = Instance.new("UICorner")
+UICorner_29.Name = "UICorner"
+UICorner_29.Parent = JumpPower_28
+UICorner_29.CornerRadius = UDim.new(0, 8)
+
+local BottomSeperator_30 = Instance.new("Frame")
+BottomSeperator_30.Name = "Bottom Seperator"
+BottomSeperator_30.Parent = Window_1
+BottomSeperator_30.Size = UDim2.new(1, 0, -0.007604559883475304, 0)
+BottomSeperator_30.Position = UDim2.new(0, 0, 1, -40)
+BottomSeperator_30.BackgroundColor3 = Color3.new(0.7568627595901489, 0.7568627595901489, 0.7568627595901489)
+BottomSeperator_30.BackgroundTransparency = 0
+BottomSeperator_30.ZIndex = 1
+BottomSeperator_30.Rotation = 0
+BottomSeperator_30.Visible = true
+BottomSeperator_30.BorderSizePixel = 0
+BottomSeperator_30.AnchorPoint = Vector2.new(0, 0)
 
 local players = game:GetService("Players")
 local runService = game:GetService("RunService")
@@ -344,7 +372,12 @@ local player = players.LocalPlayer
 local char = player.Character or player.CharacterAdded:Wait()
 local mouse = player:GetMouse()
 
-local makeScriptGui = gui
+local makeScriptGui = game.Players.LocalPlayer.PlayerGui:WaitForChild("MakeScript")
+
+_G.godmode = false
+_G.noclip = false
+_G.infinjump = false
+_G.anchor = false
 
 -- God Mode
 local function toggleGodmode(button)
@@ -442,6 +475,23 @@ local function toggleInfJump(button)
 			end
 		end
 	end)
+end
+
+-- Anchor
+local function toggleAnchor(button)
+	_G.toggleanchor = not _G.toggleanchor
+	button.BackgroundColor3 = _G.toggleanchor and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+
+	if _G.toggleanchor then
+		char.HumanoidRootPart.Anchored = true
+		local stayPos = char.HumanoidRootPart.Position
+		while _G.toggleanchor do
+			char.HumanoidRootPart.CFrame = CFrame.new(stayPos)
+			wait()
+		end
+	else
+		char.HumanoidRootPart.Anchored = false
+	end
 end
 
 -- TP Tool
@@ -574,10 +624,11 @@ end)
 
 topGridLayout["Give TPtool"].MouseButton1Click:Connect(giveTpTool)
 
-bottomGridLayout["Walkspeed"].Changed:Connect(function()
-	setWalkSpeed(bottomGridLayout["Walkspeed"])
+topGridLayout["Anchor"].MouseButton1Click:Connect(function()
+	toggleAnchor(topGridLayout["Anchor"])
 end)
 
-bottomGridLayout["Jump Power"].Changed:Connect(function()
+runService.RenderStepped:Connect(function()
+	setWalkSpeed(bottomGridLayout["Walkspeed"])
 	setJumpPower(bottomGridLayout["Jump Power"])
 end)
