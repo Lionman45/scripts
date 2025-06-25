@@ -150,10 +150,20 @@ UICorner_12.CornerRadius = UDim.new(0, 8)
 local UIGridLayout_13 = Instance.new("UIGridLayout")
 UIGridLayout_13.Name = "UIGridLayout"
 UIGridLayout_13.Parent = TopGridLayout_10
+UIGridLayout_13.CellSize = UDim2.new(0, 75, 0, 25)
+UIGridLayout_13.CellPadding = UDim2.new(0, 10, 0, 10)
+UIGridLayout_13.FillDirection = Enum.FillDirection.Enum.FillDirection.Horizontal
+UIGridLayout_13.HorizontalAlignment = Enum.HorizontalAlignment.Enum.HorizontalAlignment.Left
+UIGridLayout_13.SortOrder = Enum.SortOrder.Enum.SortOrder.LayoutOrder
+UIGridLayout_13.VerticalAlignment = Enum.VerticalAlignment.Enum.VerticalAlignment.Top
 
 local UIPadding_14 = Instance.new("UIPadding")
 UIPadding_14.Name = "UIPadding"
 UIPadding_14.Parent = TopGridLayout_10
+UIPadding_14.PaddingTop = UDim.new(0, 10)
+UIPadding_14.PaddingBottom = UDim.new(0, 10)
+UIPadding_14.PaddingLeft = UDim.new(0, 10)
+UIPadding_14.PaddingRight = UDim.new(0, 10)
 
 local Noclip_15 = Instance.new("TextButton")
 Noclip_15.Name = "Noclip"
@@ -246,10 +256,20 @@ BottomGridLayout_21.AnchorPoint = Vector2.new(0, 0)
 local UIGridLayout_22 = Instance.new("UIGridLayout")
 UIGridLayout_22.Name = "UIGridLayout"
 UIGridLayout_22.Parent = BottomGridLayout_21
+UIGridLayout_22.CellSize = UDim2.new(0, 75, 0, 25)
+UIGridLayout_22.CellPadding = UDim2.new(0, 10, 0, 10)
+UIGridLayout_22.FillDirection = Enum.FillDirection.Enum.FillDirection.Horizontal
+UIGridLayout_22.HorizontalAlignment = Enum.HorizontalAlignment.Enum.HorizontalAlignment.Left
+UIGridLayout_22.SortOrder = Enum.SortOrder.Enum.SortOrder.LayoutOrder
+UIGridLayout_22.VerticalAlignment = Enum.VerticalAlignment.Enum.VerticalAlignment.Top
 
 local UIPadding_23 = Instance.new("UIPadding")
 UIPadding_23.Name = "UIPadding"
 UIPadding_23.Parent = BottomGridLayout_21
+UIPadding_23.PaddingTop = UDim.new(0, 10)
+UIPadding_23.PaddingBottom = UDim.new(0, 10)
+UIPadding_23.PaddingLeft = UDim.new(0, 10)
+UIPadding_23.PaddingRight = UDim.new(0, 10)
 
 local Walkspeed_24 = Instance.new("TextBox")
 Walkspeed_24.Name = "Walkspeed"
@@ -322,7 +342,7 @@ local player = players.LocalPlayer
 local char = player.Character or player.CharacterAdded:Wait()
 local mouse = player:GetMouse()
 
-local makeScriptGui = gui
+local makeScriptGui = script.Parent:WaitForChild("MakeScript")
 
 -- God Mode
 local function toggleGodmode(button)
@@ -457,6 +477,35 @@ local function setupCloseButton(btn)
 	end)
 end
 
+-- Drag Logic
+local function setupDragHandle(dragHandle)
+	local window = dragHandle.Parent
+	local dragging = false
+	local dragStart, startPos
+
+	dragHandle.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			mouse.Icon = "rbxassetid://102114458595180"
+			dragStart = input.Position
+			startPos = window.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+					mouse.Icon = ""
+				end
+			end)
+		end
+	end)
+
+	UIS.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local delta = input.Position - dragStart
+			window.Position = startPos + UDim2.new(0, delta.X, 0, delta.Y)
+		end
+	end)
+end
+
 -- Resize Logic
 local function setupResizeHandle(resizeHandle)
 	local window = resizeHandle.Parent
@@ -488,6 +537,8 @@ local function setupResizeHandle(resizeHandle)
 	end)
 end
 
+
+
 -- Hover Change
 local function setupHoverChange(btn)
 	btn.MouseEnter:Connect(function()
@@ -499,6 +550,7 @@ local function setupHoverChange(btn)
 end
 
 -- Hook up everything
+setupDragHandle(makeScriptGui.Window.WindowsDragBar)
 setupCloseButton(makeScriptGui.Window.WindowsDragBar.X)
 setupResizeHandle(makeScriptGui.Window.Resize)
 setupHoverChange(makeScriptGui.Window.Resize)
