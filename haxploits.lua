@@ -152,10 +152,10 @@ UIGridLayout_13.Name = "UIGridLayout"
 UIGridLayout_13.Parent = TopGridLayout_10
 UIGridLayout_13.CellSize = UDim2.new(0, 75, 0, 25)
 UIGridLayout_13.CellPadding = UDim2.new(0, 10, 0, 10)
-UIGridLayout_13.FillDirection = Enum.FillDirection.Enum.FillDirection.Horizontal
-UIGridLayout_13.HorizontalAlignment = Enum.HorizontalAlignment.Enum.HorizontalAlignment.Left
-UIGridLayout_13.SortOrder = Enum.SortOrder.Enum.SortOrder.LayoutOrder
-UIGridLayout_13.VerticalAlignment = Enum.VerticalAlignment.Enum.VerticalAlignment.Top
+UIGridLayout_13.FillDirection = Enum.FillDirection.Horizontal
+UIGridLayout_13.HorizontalAlignment = Enum.HorizontalAlignment.Left
+UIGridLayout_13.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_13.VerticalAlignment = Enum.VerticalAlignment.Top
 
 local UIPadding_14 = Instance.new("UIPadding")
 UIPadding_14.Name = "UIPadding"
@@ -258,10 +258,10 @@ UIGridLayout_22.Name = "UIGridLayout"
 UIGridLayout_22.Parent = BottomGridLayout_21
 UIGridLayout_22.CellSize = UDim2.new(0, 75, 0, 25)
 UIGridLayout_22.CellPadding = UDim2.new(0, 10, 0, 10)
-UIGridLayout_22.FillDirection = Enum.FillDirection.Enum.FillDirection.Horizontal
-UIGridLayout_22.HorizontalAlignment = Enum.HorizontalAlignment.Enum.HorizontalAlignment.Left
-UIGridLayout_22.SortOrder = Enum.SortOrder.Enum.SortOrder.LayoutOrder
-UIGridLayout_22.VerticalAlignment = Enum.VerticalAlignment.Enum.VerticalAlignment.Top
+UIGridLayout_22.FillDirection = Enum.FillDirection.Horizontal
+UIGridLayout_22.HorizontalAlignment = Enum.HorizontalAlignment.Left
+UIGridLayout_22.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_22.VerticalAlignment = Enum.VerticalAlignment.Top
 
 local UIPadding_23 = Instance.new("UIPadding")
 UIPadding_23.Name = "UIPadding"
@@ -290,6 +290,7 @@ Walkspeed_24.Font = Enum.Font.FredokaOne
 Walkspeed_24.TextWrapped = false
 Walkspeed_24.TextScaled = false
 Walkspeed_24.TextTransparency = 0
+Walkspeed_24.PlaceholderText = "Walkspeed"
 
 local UICorner_25 = Instance.new("UICorner")
 UICorner_25.Name = "UICorner"
@@ -315,6 +316,7 @@ JumpPower_26.Font = Enum.Font.FredokaOne
 JumpPower_26.TextWrapped = false
 JumpPower_26.TextScaled = false
 JumpPower_26.TextTransparency = 0
+JumpPower_26.PlaceholderText = "Jump Power"
 
 local UICorner_27 = Instance.new("UICorner")
 UICorner_27.Name = "UICorner"
@@ -342,7 +344,7 @@ local player = players.LocalPlayer
 local char = player.Character or player.CharacterAdded:Wait()
 local mouse = player:GetMouse()
 
-local makeScriptGui = script.Parent:WaitForChild("MakeScript")
+local makeScriptGui = gui
 
 -- God Mode
 local function toggleGodmode(button)
