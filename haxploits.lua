@@ -5,7 +5,7 @@ gui.Name = 'MakeScript'
 local Window_1 = Instance.new("Frame")
 Window_1.Name = "Window"
 Window_1.Parent = gui
-Window_1.Size = UDim2.new(0, 393, 0, 263)
+Window_1.Size = UDim2.new(0, 267, 0, 210)
 Window_1.Position = UDim2.new(0.5502644777297974, 0, 0.3165583908557892, 0)
 Window_1.BackgroundColor3 = Color3.new(0, 0, 0)
 Window_1.BackgroundTransparency = 0.3499999940395355
@@ -65,6 +65,8 @@ X_5.Font = Enum.Font.FredokaOne
 X_5.TextWrapped = true
 X_5.TextScaled = true
 X_5.TextTransparency = 0
+X_5.TextXAlignment = Enum.TextXAlignment.Center
+X_5.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_6 = Instance.new("UICorner")
 UICorner_6.Name = "UICorner"
@@ -90,6 +92,8 @@ Title_7.Font = Enum.Font.SourceSansBold
 Title_7.TextWrapped = true
 Title_7.TextScaled = false
 Title_7.TextTransparency = 0
+Title_7.TextXAlignment = Enum.TextXAlignment.Left
+Title_7.TextYAlignment = Enum.TextYAlignment.Center
 
 local UIStroke_8 = Instance.new("UIStroke")
 UIStroke_8.Name = "UIStroke"
@@ -101,7 +105,7 @@ local Resize_9 = Instance.new("Frame")
 Resize_9.Name = "Resize"
 Resize_9.Parent = Window_1
 Resize_9.Size = UDim2.new(0, 10, 0, 10)
-Resize_9.Position = UDim2.new(1, -5, 1, -5)
+Resize_9.Position = UDim2.new(0.984732985496521, -5, 0.980988621711731, -5)
 Resize_9.BackgroundColor3 = Color3.new(0.7568628191947937, 0.7568628191947937, 0.7568628191947937)
 Resize_9.BackgroundTransparency = 0
 Resize_9.ZIndex = 1
@@ -142,6 +146,8 @@ GodMode_11.Font = Enum.Font.FredokaOne
 GodMode_11.TextWrapped = true
 GodMode_11.TextScaled = false
 GodMode_11.TextTransparency = 0
+GodMode_11.TextXAlignment = Enum.TextXAlignment.Center
+GodMode_11.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_12 = Instance.new("UICorner")
 UICorner_12.Name = "UICorner"
@@ -185,6 +191,8 @@ Noclip_15.Font = Enum.Font.FredokaOne
 Noclip_15.TextWrapped = true
 Noclip_15.TextScaled = false
 Noclip_15.TextTransparency = 0
+Noclip_15.TextXAlignment = Enum.TextXAlignment.Center
+Noclip_15.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_16 = Instance.new("UICorner")
 UICorner_16.Name = "UICorner"
@@ -210,6 +218,8 @@ InfJump_17.Font = Enum.Font.FredokaOne
 InfJump_17.TextWrapped = true
 InfJump_17.TextScaled = false
 InfJump_17.TextTransparency = 0
+InfJump_17.TextXAlignment = Enum.TextXAlignment.Center
+InfJump_17.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_18 = Instance.new("UICorner")
 UICorner_18.Name = "UICorner"
@@ -235,6 +245,8 @@ GiveTPtool_19.Font = Enum.Font.FredokaOne
 GiveTPtool_19.TextWrapped = true
 GiveTPtool_19.TextScaled = false
 GiveTPtool_19.TextTransparency = 0
+GiveTPtool_19.TextXAlignment = Enum.TextXAlignment.Center
+GiveTPtool_19.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_20 = Instance.new("UICorner")
 UICorner_20.Name = "UICorner"
@@ -260,6 +272,8 @@ Anchor_21.Font = Enum.Font.FredokaOne
 Anchor_21.TextWrapped = true
 Anchor_21.TextScaled = false
 Anchor_21.TextTransparency = 0
+Anchor_21.TextXAlignment = Enum.TextXAlignment.Center
+Anchor_21.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_22 = Instance.new("UICorner")
 UICorner_22.Name = "UICorner"
@@ -269,8 +283,8 @@ UICorner_22.CornerRadius = UDim.new(0, 8)
 local BottomGridLayout_23 = Instance.new("Frame")
 BottomGridLayout_23.Name = "BottomGridLayout"
 BottomGridLayout_23.Parent = Window_1
-BottomGridLayout_23.Size = UDim2.new(1, 0, 0, 40)
-BottomGridLayout_23.Position = UDim2.new(0, 0, 1, -40)
+BottomGridLayout_23.Size = UDim2.new(1, 0, 0.3048778772354126, 40)
+BottomGridLayout_23.Position = UDim2.new(0, 0, 0.5000001192092896, 0)
 BottomGridLayout_23.BackgroundColor3 = Color3.new(0, 0, 0)
 BottomGridLayout_23.BackgroundTransparency = 1
 BottomGridLayout_23.ZIndex = 1
@@ -316,6 +330,8 @@ Walkspeed_26.Font = Enum.Font.FredokaOne
 Walkspeed_26.TextWrapped = false
 Walkspeed_26.TextScaled = false
 Walkspeed_26.TextTransparency = 0
+Walkspeed_26.TextXAlignment = Enum.TextXAlignment.Center
+Walkspeed_26.TextYAlignment = Enum.TextYAlignment.Center
 Walkspeed_26.PlaceholderText = "Walkspeed"
 Walkspeed_26.ClearTextOnFocus = false
 
@@ -343,6 +359,8 @@ JumpPower_28.Font = Enum.Font.FredokaOne
 JumpPower_28.TextWrapped = false
 JumpPower_28.TextScaled = false
 JumpPower_28.TextTransparency = 0
+JumpPower_28.TextXAlignment = Enum.TextXAlignment.Center
+JumpPower_28.TextYAlignment = Enum.TextYAlignment.Center
 JumpPower_28.PlaceholderText = "Jump Power"
 JumpPower_28.ClearTextOnFocus = false
 
@@ -351,18 +369,101 @@ UICorner_29.Name = "UICorner"
 UICorner_29.Parent = JumpPower_28
 UICorner_29.CornerRadius = UDim.new(0, 8)
 
-local BottomSeperator_30 = Instance.new("Frame")
-BottomSeperator_30.Name = "Bottom Seperator"
-BottomSeperator_30.Parent = Window_1
-BottomSeperator_30.Size = UDim2.new(1, 0, -0.007604559883475304, 0)
-BottomSeperator_30.Position = UDim2.new(0, 0, 1, -40)
-BottomSeperator_30.BackgroundColor3 = Color3.new(0.7568627595901489, 0.7568627595901489, 0.7568627595901489)
-BottomSeperator_30.BackgroundTransparency = 0
-BottomSeperator_30.ZIndex = 1
-BottomSeperator_30.Rotation = 0
-BottomSeperator_30.Visible = true
-BottomSeperator_30.BorderSizePixel = 0
-BottomSeperator_30.AnchorPoint = Vector2.new(0, 0)
+local Username_30 = Instance.new("TextBox")
+Username_30.Name = "Username"
+Username_30.Parent = BottomGridLayout_23
+Username_30.Size = UDim2.new(0, 200, 0, 50)
+Username_30.Position = UDim2.new(0, 0, 0, 0)
+Username_30.BackgroundColor3 = Color3.new(0, 0, 0)
+Username_30.BackgroundTransparency = 0
+Username_30.ZIndex = 1
+Username_30.Rotation = 0
+Username_30.Visible = true
+Username_30.BorderSizePixel = 0
+Username_30.AnchorPoint = Vector2.new(0, 0)
+Username_30.Text = ""
+Username_30.TextSize = 12
+Username_30.TextColor3 = Color3.new(1, 1, 1)
+Username_30.Font = Enum.Font.FredokaOne
+Username_30.TextWrapped = false
+Username_30.TextScaled = false
+Username_30.TextTransparency = 0
+Username_30.TextXAlignment = Enum.TextXAlignment.Center
+Username_30.TextYAlignment = Enum.TextYAlignment.Center
+Username_30.PlaceholderText = "Username"
+Username_30.ClearTextOnFocus = false
+
+local UICorner_31 = Instance.new("UICorner")
+UICorner_31.Name = "UICorner"
+UICorner_31.Parent = Username_30
+UICorner_31.CornerRadius = UDim.new(0, 8)
+
+local Teleport_32 = Instance.new("TextButton")
+Teleport_32.Name = "Teleport"
+Teleport_32.Parent = BottomGridLayout_23
+Teleport_32.Size = UDim2.new(0, 26, 1, 0)
+Teleport_32.Position = UDim2.new(1, -26, 0, 0)
+Teleport_32.BackgroundColor3 = Color3.new(0, 0, 0)
+Teleport_32.BackgroundTransparency = 0
+Teleport_32.ZIndex = 1
+Teleport_32.Rotation = 0
+Teleport_32.Visible = true
+Teleport_32.BorderSizePixel = 0
+Teleport_32.AnchorPoint = Vector2.new(0, 0)
+Teleport_32.Text = "Teleport"
+Teleport_32.TextSize = 12
+Teleport_32.TextColor3 = Color3.new(1, 1, 1)
+Teleport_32.Font = Enum.Font.FredokaOne
+Teleport_32.TextWrapped = true
+Teleport_32.TextScaled = false
+Teleport_32.TextTransparency = 0
+Teleport_32.TextXAlignment = Enum.TextXAlignment.Center
+Teleport_32.TextYAlignment = Enum.TextYAlignment.Center
+
+local UICorner_33 = Instance.new("UICorner")
+UICorner_33.Name = "UICorner"
+UICorner_33.Parent = Teleport_32
+UICorner_33.CornerRadius = UDim.new(0, 8)
+
+local Preset_34 = Instance.new("TextButton")
+Preset_34.Name = "Preset"
+Preset_34.Parent = BottomGridLayout_23
+Preset_34.Size = UDim2.new(0, 26, 1, 0)
+Preset_34.Position = UDim2.new(1, -26, 0, 0)
+Preset_34.BackgroundColor3 = Color3.new(0, 0, 0)
+Preset_34.BackgroundTransparency = 0
+Preset_34.ZIndex = 1
+Preset_34.Rotation = 0
+Preset_34.Visible = true
+Preset_34.BorderSizePixel = 0
+Preset_34.AnchorPoint = Vector2.new(0, 0)
+Preset_34.Text = "Preset"
+Preset_34.TextSize = 12
+Preset_34.TextColor3 = Color3.new(1, 1, 1)
+Preset_34.Font = Enum.Font.FredokaOne
+Preset_34.TextWrapped = true
+Preset_34.TextScaled = false
+Preset_34.TextTransparency = 0
+Preset_34.TextXAlignment = Enum.TextXAlignment.Center
+Preset_34.TextYAlignment = Enum.TextYAlignment.Center
+
+local UICorner_35 = Instance.new("UICorner")
+UICorner_35.Name = "UICorner"
+UICorner_35.Parent = Preset_34
+UICorner_35.CornerRadius = UDim.new(0, 8)
+
+local BottomSeperator_36 = Instance.new("Frame")
+BottomSeperator_36.Name = "Bottom Seperator"
+BottomSeperator_36.Parent = Window_1
+BottomSeperator_36.Size = UDim2.new(1, 0, -0.007604559883475304, 0)
+BottomSeperator_36.Position = UDim2.new(0, 0, 0.5, 0)
+BottomSeperator_36.BackgroundColor3 = Color3.new(0.7568627595901489, 0.7568627595901489, 0.7568627595901489)
+BottomSeperator_36.BackgroundTransparency = 0
+BottomSeperator_36.ZIndex = 1
+BottomSeperator_36.Rotation = 0
+BottomSeperator_36.Visible = true
+BottomSeperator_36.BorderSizePixel = 0
+BottomSeperator_36.AnchorPoint = Vector2.new(0, 0)
 
 local players = game:GetService("Players")
 local runService = game:GetService("RunService")
@@ -522,6 +623,228 @@ local function setJumpPower(box)
 	end
 end
 
+-- Teleport To Username
+local function tpToPlr(box)
+	local targetName = box.Parent.Username.Text
+	if targetName then
+		local target = game.Players:FindFirstChild(targetName)
+		player.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+	end
+end
+
+-- Aimbot (Head) At Nearest Player When User Presses Right Control
+local function aimHead()
+	-- Services
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+
+	-- Local references
+	local localPlayer = Players.LocalPlayer
+	local camera = Workspace.CurrentCamera
+
+	-- Config
+	local TOGGLE_KEY = Enum.KeyCode.LeftControl    -- toggles aiming (when aimbot enabled)
+	local ENABLE_KEY = Enum.KeyCode.Backquote      -- toggles the actual aimbot on/off (the "~" key)
+	local SMOOTH_ALPHA = 0.25                      -- interpolation alpha (0..1), smaller = smoother
+	local HEAD_LOOK_OFFSET = Vector3.new(0, 0.2, 0)
+	local MAX_RANGE = 1000                         -- optional maximum search range in studs (set high to disable)
+
+	-- State
+	local aimbotEnabled = false    -- toggled by ENABLE_KEY (~)
+	local aiming = false           -- toggled by TOGGLE_KEY (LeftControl) *only* when aimbotEnabled is true
+	local renderConn = nil
+
+	-- Raycast params (used to check visibility)
+	local RaycastParams = RaycastParams.new()
+	RaycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+	-- We'll set FilterDescendantsInstances dynamically in checks to avoid hitting local player's character.
+
+	-- Helper: returns true if head is visible from camera (not blocked by world geometry)
+	local function isHeadVisible(headPart)
+		if not headPart or not headPart:IsA("BasePart") then return false end
+		if not camera or not camera.Parent then return false end
+
+		-- Setup filter: don't hit local player's character
+		local filters = {}
+		if localPlayer.Character then
+			table.insert(filters, localPlayer.Character)
+		end
+
+		-- Also ignore any tools or attachments you don't want blocking (optionally)
+		RaycastParams.FilterDescendantsInstances = filters
+
+		local origin = camera.CFrame.Position
+		local direction = (headPart.Position - origin)
+		local dist = direction.Magnitude
+		if dist > MAX_RANGE then
+			return false
+		end
+
+		-- raycast
+		local result = Workspace:Raycast(origin, direction.Unit * dist, RaycastParams)
+		if not result then
+			-- nothing hit => unobstructed
+			return true
+		end
+
+		-- If we hit the target character (headPart or any descendant), then it's visible
+		if result.Instance and result.Instance:IsDescendantOf(headPart.Parent) then
+			return true
+		end
+
+		-- otherwise blocked
+		return false
+	end
+
+	-- Helper: find nearest visible head (not behind a wall), excluding local player
+	local function findNearestVisibleHead()
+		local nearest = nil
+		local nearestDist = math.huge
+		if not camera or not camera.Parent then return nil end
+		local camPos = camera.CFrame.Position
+
+		for _, plr in ipairs(Players:GetPlayers()) do
+			if plr ~= localPlayer and plr.Character and plr.Character.Parent then
+				local head = plr.Character:FindFirstChild("Head")
+				if head and head:IsA("BasePart") then
+					local d = (head.Position - camPos).Magnitude
+					if d <= MAX_RANGE and d < nearestDist then
+						-- quick visibility test
+						if isHeadVisible(head) then
+							nearest = head
+							nearestDist = d
+						end
+					end
+				end
+			end
+		end
+
+		return nearest
+	end
+
+	-- Start the render loop to orient camera toward target
+	local function startRenderLoop()
+		if renderConn then return end
+		renderConn = RunService.RenderStepped:Connect(function()
+			-- Only aim when both aiming and aimbotEnabled are true
+			if not aiming or not aimbotEnabled then
+				return
+			end
+
+			-- Find the nearest visible head each frame (reacquires if previous target dies / hides)
+			local targetHead = findNearestVisibleHead()
+			if not targetHead then
+				-- nothing visible to aim at; stop aiming (so Control must be pressed again to re-enable)
+				-- NOTE: you asked that pressing "~" can unlock without pressing control; that is handled elsewhere.
+				aiming = false
+				return
+			end
+
+			-- compute target lookAt and interpolate camera orientation
+			local lookAt = targetHead.Position + HEAD_LOOK_OFFSET
+			local curCFrame = camera.CFrame
+			local targetCFrame = CFrame.new(curCFrame.Position, lookAt)
+			camera.CFrame = curCFrame:Lerp(targetCFrame, SMOOTH_ALPHA)
+		end)
+	end
+
+	-- Stop and cleanup render loop
+	local function stopRenderLoop()
+		if renderConn then
+			renderConn:Disconnect()
+			renderConn = nil
+		end
+	end
+
+	-- Toggle aiming (LeftControl) — only works when aimbotEnabled is true (per your example)
+	local function toggleAiming()
+		if not aimbotEnabled then
+			-- When the global aimbot is off, pressing Control does nothing (matches your example)
+			return
+		end
+
+		aiming = not aiming
+		if aiming then
+			startRenderLoop()
+		else
+			-- stop aiming but keep the aimbot enabled so it can be re-toggled
+			stopRenderLoop()
+		end
+	end
+
+	-- Toggle aimbot enabled (Backquote / "~" key). When turning it off, ensure aiming stops immediately.
+	local function toggleAimbotEnabled()
+		aimbotEnabled = not aimbotEnabled
+		if not aimbotEnabled then
+			-- Immediately disable aiming if aimbot turned off
+			aiming = false
+			stopRenderLoop()
+		else
+			-- aimbot turned on: don't automatically start aiming — user must press Control to toggle aiming.
+			-- (This matches your sequence: press "~" then press Control to lock.)
+		end
+		-- Optional: print indicator to the client for debugging
+		-- You can replace prints with UI notifications if you want.
+		if aimbotEnabled then
+			print("[Aimbot] ENABLED")
+		else
+			print("[Aimbot] DISABLED")
+		end
+	end
+
+	-- Input handling
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		-- Toggle aimbot enabled with Backquote (~)
+		if input.KeyCode == ENABLE_KEY then
+			toggleAimbotEnabled()
+			-- Toggle aiming with LeftControl (only if aimbot enabled)
+		elseif input.KeyCode == TOGGLE_KEY then
+			-- Behavior: if aimbotEnabled is false, pressing Control does nothing.
+			toggleAiming()
+		end
+	end)
+
+	-- Optional: also allow stopping aiming when ESC or when character dies
+	-- Stop aiming on character death / respawn (so camera won't be stuck)
+	local function onCharacterAdded(char)
+		local humanoid = char:FindFirstChildOfClass("Humanoid")
+		if humanoid then
+			humanoid.Died:Connect(function()
+				aiming = false
+				stopRenderLoop()
+			end)
+		end
+	end
+
+	if localPlayer.Character then
+		onCharacterAdded(localPlayer.Character)
+	end
+	localPlayer.CharacterAdded:Connect(onCharacterAdded)
+
+	-- Cleanup when LocalPlayer removed
+	localPlayer.AncestryChanged:Connect(function()
+		if not localPlayer:IsDescendantOf(game) then
+			aiming = false
+			aimbotEnabled = false
+			stopRenderLoop()
+		end
+	end)
+end
+
+-- Activate the feature
+aimHead()
+
+local function preset(window)
+	window.BottomGridLayout.Walkspeed.Text = 500
+	window.BottomGridLayout["Jump Power"].Text = 100
+	local topGridLayout = window.TopGridLayout
+	toggleInfJump(topGridLayout["Inf Jump"])
+	toggleNoclip(topGridLayout["Noclip"])
+end
+
 -- Close Button
 local function setupCloseButton(btn)
 	btn.MouseButton1Click:Connect(function()
@@ -626,6 +949,14 @@ topGridLayout["Give TPtool"].MouseButton1Click:Connect(giveTpTool)
 
 topGridLayout["Anchor"].MouseButton1Click:Connect(function()
 	toggleAnchor(topGridLayout["Anchor"])
+end)
+
+bottomGridLayout["Teleport"].MouseButton1Click:Connect(function()
+	tpToPlr(bottomGridLayout["Teleport"])
+end)
+
+bottomGridLayout["Preset"].MouseButton1Click:Connect(function()
+	preset(bottomGridLayout.Parent)
 end)
 
 runService.RenderStepped:Connect(function()
