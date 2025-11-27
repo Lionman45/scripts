@@ -1,12 +1,11 @@
 local gui = Instance.new('ScreenGui')
-local players = game:GetService("Players")
-gui.Parent = players.LocalPlayer.PlayerGui
+gui.Parent = game:GetService("Players").LocalPlayer.PlayerGui
 gui.Name = 'MakeScript'
 
 local Window_1 = Instance.new("Frame")
 Window_1.Name = "Window"
 Window_1.Parent = gui
-Window_1.Size = UDim2.new(0, 267, 0, 210)
+Window_1.Size = UDim2.new(0, 350, 0, 207)
 Window_1.Position = UDim2.new(0.5502644777297974, 0, 0.3165583908557892, 0)
 Window_1.BackgroundColor3 = Color3.new(0, 0, 0)
 Window_1.BackgroundTransparency = 0.3499999940395355
@@ -293,7 +292,7 @@ Fly_23.Rotation = 0
 Fly_23.Visible = true
 Fly_23.BorderSizePixel = 0
 Fly_23.AnchorPoint = Vector2.new(0, 0)
-Fly_23.Text = "Fly [E]"
+Fly_23.Text = "Fly [H]"
 Fly_23.TextSize = 12
 Fly_23.TextColor3 = Color3.new(1, 1, 1)
 Fly_23.Font = Enum.Font.FredokaOne
@@ -308,219 +307,246 @@ UICorner_24.Name = "UICorner"
 UICorner_24.Parent = Fly_23
 UICorner_24.CornerRadius = UDim.new(0, 8)
 
-local BottomGridLayout_25 = Instance.new("Frame")
-BottomGridLayout_25.Name = "BottomGridLayout"
-BottomGridLayout_25.Parent = Window_1
-BottomGridLayout_25.Size = UDim2.new(1, 0, 0.3048778772354126, 40)
-BottomGridLayout_25.Position = UDim2.new(0, 0, 0.5000001192092896, 0)
-BottomGridLayout_25.BackgroundColor3 = Color3.new(0, 0, 0)
-BottomGridLayout_25.BackgroundTransparency = 1
-BottomGridLayout_25.ZIndex = 1
-BottomGridLayout_25.Rotation = 0
-BottomGridLayout_25.Visible = true
-BottomGridLayout_25.BorderSizePixel = 0
-BottomGridLayout_25.AnchorPoint = Vector2.new(0, 0)
+local PlrEsp_25 = Instance.new("TextButton")
+PlrEsp_25.Name = "PlrEsp"
+PlrEsp_25.Parent = TopGridLayout_10
+PlrEsp_25.Size = UDim2.new(0, 26, 1, 0)
+PlrEsp_25.Position = UDim2.new(1, -26, 0, 0)
+PlrEsp_25.BackgroundColor3 = Color3.new(1, 0, 0)
+PlrEsp_25.BackgroundTransparency = 0
+PlrEsp_25.ZIndex = 1
+PlrEsp_25.Rotation = 0
+PlrEsp_25.Visible = true
+PlrEsp_25.BorderSizePixel = 0
+PlrEsp_25.AnchorPoint = Vector2.new(0, 0)
+PlrEsp_25.Text = "Player ESP [L]"
+PlrEsp_25.TextSize = 12
+PlrEsp_25.TextColor3 = Color3.new(1, 1, 1)
+PlrEsp_25.Font = Enum.Font.FredokaOne
+PlrEsp_25.TextWrapped = true
+PlrEsp_25.TextScaled = false
+PlrEsp_25.TextTransparency = 0
+PlrEsp_25.TextXAlignment = Enum.TextXAlignment.Center
+PlrEsp_25.TextYAlignment = Enum.TextYAlignment.Center
 
-local UIGridLayout_26 = Instance.new("UIGridLayout")
-UIGridLayout_26.Name = "UIGridLayout"
-UIGridLayout_26.Parent = BottomGridLayout_25
-UIGridLayout_26.CellSize = UDim2.new(0, 75, 0, 25)
-UIGridLayout_26.CellPadding = UDim2.new(0, 10, 0, 10)
-UIGridLayout_26.FillDirection = Enum.FillDirection.Horizontal
-UIGridLayout_26.HorizontalAlignment = Enum.HorizontalAlignment.Left
-UIGridLayout_26.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_26.VerticalAlignment = Enum.VerticalAlignment.Top
+local UICorner_26 = Instance.new("UICorner")
+UICorner_26.Name = "UICorner"
+UICorner_26.Parent = PlrEsp_25
+UICorner_26.CornerRadius = UDim.new(0, 8)
 
-local UIPadding_27 = Instance.new("UIPadding")
-UIPadding_27.Name = "UIPadding"
-UIPadding_27.Parent = BottomGridLayout_25
-UIPadding_27.PaddingTop = UDim.new(0, 10)
-UIPadding_27.PaddingBottom = UDim.new(0, 10)
-UIPadding_27.PaddingLeft = UDim.new(0, 10)
-UIPadding_27.PaddingRight = UDim.new(0, 10)
+local BottomGridLayout_27 = Instance.new("Frame")
+BottomGridLayout_27.Name = "BottomGridLayout"
+BottomGridLayout_27.Parent = Window_1
+BottomGridLayout_27.Size = UDim2.new(1, 0, 0.3048778772354126, 40)
+BottomGridLayout_27.Position = UDim2.new(0, 0, 0.5000001192092896, 0)
+BottomGridLayout_27.BackgroundColor3 = Color3.new(0, 0, 0)
+BottomGridLayout_27.BackgroundTransparency = 1
+BottomGridLayout_27.ZIndex = 1
+BottomGridLayout_27.Rotation = 0
+BottomGridLayout_27.Visible = true
+BottomGridLayout_27.BorderSizePixel = 0
+BottomGridLayout_27.AnchorPoint = Vector2.new(0, 0)
 
-local Walkspeed_28 = Instance.new("TextBox")
-Walkspeed_28.Name = "Walkspeed"
-Walkspeed_28.Parent = BottomGridLayout_25
-Walkspeed_28.Size = UDim2.new(0, 200, 0, 50)
-Walkspeed_28.Position = UDim2.new(0, 0, 0, 0)
-Walkspeed_28.BackgroundColor3 = Color3.new(0, 0, 0)
-Walkspeed_28.BackgroundTransparency = 0
-Walkspeed_28.ZIndex = 1
-Walkspeed_28.Rotation = 0
-Walkspeed_28.Visible = true
-Walkspeed_28.BorderSizePixel = 0
-Walkspeed_28.AnchorPoint = Vector2.new(0, 0)
-Walkspeed_28.Text = ""
-Walkspeed_28.TextSize = 12
-Walkspeed_28.TextColor3 = Color3.new(1, 1, 1)
-Walkspeed_28.Font = Enum.Font.FredokaOne
-Walkspeed_28.TextWrapped = false
-Walkspeed_28.TextScaled = false
-Walkspeed_28.TextTransparency = 0
-Walkspeed_28.TextXAlignment = Enum.TextXAlignment.Center
-Walkspeed_28.TextYAlignment = Enum.TextYAlignment.Center
-Walkspeed_28.PlaceholderText = "Walkspeed"
-Walkspeed_28.ClearTextOnFocus = false
+local UIGridLayout_28 = Instance.new("UIGridLayout")
+UIGridLayout_28.Name = "UIGridLayout"
+UIGridLayout_28.Parent = BottomGridLayout_27
+UIGridLayout_28.CellSize = UDim2.new(0, 75, 0, 25)
+UIGridLayout_28.CellPadding = UDim2.new(0, 10, 0, 10)
+UIGridLayout_28.FillDirection = Enum.FillDirection.Horizontal
+UIGridLayout_28.HorizontalAlignment = Enum.HorizontalAlignment.Left
+UIGridLayout_28.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_28.VerticalAlignment = Enum.VerticalAlignment.Top
 
-local UICorner_29 = Instance.new("UICorner")
-UICorner_29.Name = "UICorner"
-UICorner_29.Parent = Walkspeed_28
-UICorner_29.CornerRadius = UDim.new(0, 8)
+local UIPadding_29 = Instance.new("UIPadding")
+UIPadding_29.Name = "UIPadding"
+UIPadding_29.Parent = BottomGridLayout_27
+UIPadding_29.PaddingTop = UDim.new(0, 10)
+UIPadding_29.PaddingBottom = UDim.new(0, 10)
+UIPadding_29.PaddingLeft = UDim.new(0, 10)
+UIPadding_29.PaddingRight = UDim.new(0, 10)
 
-local JumpPower_30 = Instance.new("TextBox")
-JumpPower_30.Name = "Jump Power"
-JumpPower_30.Parent = BottomGridLayout_25
-JumpPower_30.Size = UDim2.new(0, 200, 0, 50)
-JumpPower_30.Position = UDim2.new(0, 0, 0, 0)
-JumpPower_30.BackgroundColor3 = Color3.new(0, 0, 0)
-JumpPower_30.BackgroundTransparency = 0
-JumpPower_30.ZIndex = 1
-JumpPower_30.Rotation = 0
-JumpPower_30.Visible = true
-JumpPower_30.BorderSizePixel = 0
-JumpPower_30.AnchorPoint = Vector2.new(0, 0)
-JumpPower_30.Text = ""
-JumpPower_30.TextSize = 12
-JumpPower_30.TextColor3 = Color3.new(1, 1, 1)
-JumpPower_30.Font = Enum.Font.FredokaOne
-JumpPower_30.TextWrapped = false
-JumpPower_30.TextScaled = false
-JumpPower_30.TextTransparency = 0
-JumpPower_30.TextXAlignment = Enum.TextXAlignment.Center
-JumpPower_30.TextYAlignment = Enum.TextYAlignment.Center
-JumpPower_30.PlaceholderText = "Jump Power"
-JumpPower_30.ClearTextOnFocus = false
+local Walkspeed_30 = Instance.new("TextBox")
+Walkspeed_30.Name = "Walkspeed"
+Walkspeed_30.Parent = BottomGridLayout_27
+Walkspeed_30.Size = UDim2.new(0, 200, 0, 50)
+Walkspeed_30.Position = UDim2.new(0, 0, 0, 0)
+Walkspeed_30.BackgroundColor3 = Color3.new(0, 0, 0)
+Walkspeed_30.BackgroundTransparency = 0
+Walkspeed_30.ZIndex = 1
+Walkspeed_30.Rotation = 0
+Walkspeed_30.Visible = true
+Walkspeed_30.BorderSizePixel = 0
+Walkspeed_30.AnchorPoint = Vector2.new(0, 0)
+Walkspeed_30.Text = ""
+Walkspeed_30.TextSize = 12
+Walkspeed_30.TextColor3 = Color3.new(1, 1, 1)
+Walkspeed_30.Font = Enum.Font.FredokaOne
+Walkspeed_30.TextWrapped = false
+Walkspeed_30.TextScaled = false
+Walkspeed_30.TextTransparency = 0
+Walkspeed_30.TextXAlignment = Enum.TextXAlignment.Center
+Walkspeed_30.TextYAlignment = Enum.TextYAlignment.Center
+Walkspeed_30.PlaceholderText = "Walkspeed"
+Walkspeed_30.ClearTextOnFocus = false
 
 local UICorner_31 = Instance.new("UICorner")
 UICorner_31.Name = "UICorner"
-UICorner_31.Parent = JumpPower_30
+UICorner_31.Parent = Walkspeed_30
 UICorner_31.CornerRadius = UDim.new(0, 8)
 
-local Username_32 = Instance.new("TextBox")
-Username_32.Name = "Username"
-Username_32.Parent = BottomGridLayout_25
-Username_32.Size = UDim2.new(0, 200, 0, 50)
-Username_32.Position = UDim2.new(0, 0, 0, 0)
-Username_32.BackgroundColor3 = Color3.new(0, 0, 0)
-Username_32.BackgroundTransparency = 0
-Username_32.ZIndex = 1
-Username_32.Rotation = 0
-Username_32.Visible = true
-Username_32.BorderSizePixel = 0
-Username_32.AnchorPoint = Vector2.new(0, 0)
-Username_32.Text = ""
-Username_32.TextSize = 12
-Username_32.TextColor3 = Color3.new(1, 1, 1)
-Username_32.Font = Enum.Font.FredokaOne
-Username_32.TextWrapped = false
-Username_32.TextScaled = false
-Username_32.TextTransparency = 0
-Username_32.TextXAlignment = Enum.TextXAlignment.Center
-Username_32.TextYAlignment = Enum.TextYAlignment.Center
-Username_32.PlaceholderText = "Username"
-Username_32.ClearTextOnFocus = false
+local JumpPower_32 = Instance.new("TextBox")
+JumpPower_32.Name = "Jump Power"
+JumpPower_32.Parent = BottomGridLayout_27
+JumpPower_32.Size = UDim2.new(0, 200, 0, 50)
+JumpPower_32.Position = UDim2.new(0, 0, 0, 0)
+JumpPower_32.BackgroundColor3 = Color3.new(0, 0, 0)
+JumpPower_32.BackgroundTransparency = 0
+JumpPower_32.ZIndex = 1
+JumpPower_32.Rotation = 0
+JumpPower_32.Visible = true
+JumpPower_32.BorderSizePixel = 0
+JumpPower_32.AnchorPoint = Vector2.new(0, 0)
+JumpPower_32.Text = ""
+JumpPower_32.TextSize = 12
+JumpPower_32.TextColor3 = Color3.new(1, 1, 1)
+JumpPower_32.Font = Enum.Font.FredokaOne
+JumpPower_32.TextWrapped = false
+JumpPower_32.TextScaled = false
+JumpPower_32.TextTransparency = 0
+JumpPower_32.TextXAlignment = Enum.TextXAlignment.Center
+JumpPower_32.TextYAlignment = Enum.TextYAlignment.Center
+JumpPower_32.PlaceholderText = "Jump Power"
+JumpPower_32.ClearTextOnFocus = false
 
 local UICorner_33 = Instance.new("UICorner")
 UICorner_33.Name = "UICorner"
-UICorner_33.Parent = Username_32
+UICorner_33.Parent = JumpPower_32
 UICorner_33.CornerRadius = UDim.new(0, 8)
 
-local Teleport_34 = Instance.new("TextButton")
-Teleport_34.Name = "Teleport"
-Teleport_34.Parent = BottomGridLayout_25
-Teleport_34.Size = UDim2.new(0, 26, 1, 0)
-Teleport_34.Position = UDim2.new(1, -26, 0, 0)
-Teleport_34.BackgroundColor3 = Color3.new(0, 0, 0)
-Teleport_34.BackgroundTransparency = 0
-Teleport_34.ZIndex = 1
-Teleport_34.Rotation = 0
-Teleport_34.Visible = true
-Teleport_34.BorderSizePixel = 0
-Teleport_34.AnchorPoint = Vector2.new(0, 0)
-Teleport_34.Text = "Teleport"
-Teleport_34.TextSize = 12
-Teleport_34.TextColor3 = Color3.new(1, 1, 1)
-Teleport_34.Font = Enum.Font.FredokaOne
-Teleport_34.TextWrapped = true
-Teleport_34.TextScaled = false
-Teleport_34.TextTransparency = 0
-Teleport_34.TextXAlignment = Enum.TextXAlignment.Center
-Teleport_34.TextYAlignment = Enum.TextYAlignment.Center
+local Username_34 = Instance.new("TextBox")
+Username_34.Name = "Username"
+Username_34.Parent = BottomGridLayout_27
+Username_34.Size = UDim2.new(0, 200, 0, 50)
+Username_34.Position = UDim2.new(0, 0, 0, 0)
+Username_34.BackgroundColor3 = Color3.new(0, 0, 0)
+Username_34.BackgroundTransparency = 0
+Username_34.ZIndex = 1
+Username_34.Rotation = 0
+Username_34.Visible = true
+Username_34.BorderSizePixel = 0
+Username_34.AnchorPoint = Vector2.new(0, 0)
+Username_34.Text = ""
+Username_34.TextSize = 12
+Username_34.TextColor3 = Color3.new(1, 1, 1)
+Username_34.Font = Enum.Font.FredokaOne
+Username_34.TextWrapped = false
+Username_34.TextScaled = false
+Username_34.TextTransparency = 0
+Username_34.TextXAlignment = Enum.TextXAlignment.Center
+Username_34.TextYAlignment = Enum.TextYAlignment.Center
+Username_34.PlaceholderText = "Username"
+Username_34.ClearTextOnFocus = false
 
 local UICorner_35 = Instance.new("UICorner")
 UICorner_35.Name = "UICorner"
-UICorner_35.Parent = Teleport_34
+UICorner_35.Parent = Username_34
 UICorner_35.CornerRadius = UDim.new(0, 8)
 
-local Preset_36 = Instance.new("TextButton")
-Preset_36.Name = "Preset"
-Preset_36.Parent = BottomGridLayout_25
-Preset_36.Size = UDim2.new(0, 26, 1, 0)
-Preset_36.Position = UDim2.new(1, -26, 0, 0)
-Preset_36.BackgroundColor3 = Color3.new(0, 0, 0)
-Preset_36.BackgroundTransparency = 0
-Preset_36.ZIndex = 1
-Preset_36.Rotation = 0
-Preset_36.Visible = true
-Preset_36.BorderSizePixel = 0
-Preset_36.AnchorPoint = Vector2.new(0, 0)
-Preset_36.Text = "Preset [J]"
-Preset_36.TextSize = 12
-Preset_36.TextColor3 = Color3.new(1, 1, 1)
-Preset_36.Font = Enum.Font.FredokaOne
-Preset_36.TextWrapped = true
-Preset_36.TextScaled = false
-Preset_36.TextTransparency = 0
-Preset_36.TextXAlignment = Enum.TextXAlignment.Center
-Preset_36.TextYAlignment = Enum.TextYAlignment.Center
+local Teleport_36 = Instance.new("TextButton")
+Teleport_36.Name = "Teleport"
+Teleport_36.Parent = BottomGridLayout_27
+Teleport_36.Size = UDim2.new(0, 26, 1, 0)
+Teleport_36.Position = UDim2.new(1, -26, 0, 0)
+Teleport_36.BackgroundColor3 = Color3.new(0, 0, 0)
+Teleport_36.BackgroundTransparency = 0
+Teleport_36.ZIndex = 1
+Teleport_36.Rotation = 0
+Teleport_36.Visible = true
+Teleport_36.BorderSizePixel = 0
+Teleport_36.AnchorPoint = Vector2.new(0, 0)
+Teleport_36.Text = "Teleport"
+Teleport_36.TextSize = 12
+Teleport_36.TextColor3 = Color3.new(1, 1, 1)
+Teleport_36.Font = Enum.Font.FredokaOne
+Teleport_36.TextWrapped = true
+Teleport_36.TextScaled = false
+Teleport_36.TextTransparency = 0
+Teleport_36.TextXAlignment = Enum.TextXAlignment.Center
+Teleport_36.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_37 = Instance.new("UICorner")
 UICorner_37.Name = "UICorner"
-UICorner_37.Parent = Preset_36
+UICorner_37.Parent = Teleport_36
 UICorner_37.CornerRadius = UDim.new(0, 8)
 
-local FlySpeed_38 = Instance.new("TextBox")
-FlySpeed_38.Name = "Fly Speed"
-FlySpeed_38.Parent = BottomGridLayout_25
-FlySpeed_38.Size = UDim2.new(0, 200, 0, 50)
-FlySpeed_38.Position = UDim2.new(0, 0, 0, 0)
-FlySpeed_38.BackgroundColor3 = Color3.new(0, 0, 0)
-FlySpeed_38.BackgroundTransparency = 0
-FlySpeed_38.ZIndex = 1
-FlySpeed_38.Rotation = 0
-FlySpeed_38.Visible = true
-FlySpeed_38.BorderSizePixel = 0
-FlySpeed_38.AnchorPoint = Vector2.new(0, 0)
-FlySpeed_38.Text = ""
-FlySpeed_38.TextSize = 12
-FlySpeed_38.TextColor3 = Color3.new(1, 1, 1)
-FlySpeed_38.Font = Enum.Font.FredokaOne
-FlySpeed_38.TextWrapped = false
-FlySpeed_38.TextScaled = false
-FlySpeed_38.TextTransparency = 0
-FlySpeed_38.TextXAlignment = Enum.TextXAlignment.Center
-FlySpeed_38.TextYAlignment = Enum.TextYAlignment.Center
-FlySpeed_38.PlaceholderText = "Fly Speed"
-FlySpeed_38.ClearTextOnFocus = false
+local Preset_38 = Instance.new("TextButton")
+Preset_38.Name = "Preset"
+Preset_38.Parent = BottomGridLayout_27
+Preset_38.Size = UDim2.new(0, 26, 1, 0)
+Preset_38.Position = UDim2.new(1, -26, 0, 0)
+Preset_38.BackgroundColor3 = Color3.new(0, 0, 0)
+Preset_38.BackgroundTransparency = 0
+Preset_38.ZIndex = 1
+Preset_38.Rotation = 0
+Preset_38.Visible = true
+Preset_38.BorderSizePixel = 0
+Preset_38.AnchorPoint = Vector2.new(0, 0)
+Preset_38.Text = "Preset [J]"
+Preset_38.TextSize = 12
+Preset_38.TextColor3 = Color3.new(1, 1, 1)
+Preset_38.Font = Enum.Font.FredokaOne
+Preset_38.TextWrapped = true
+Preset_38.TextScaled = false
+Preset_38.TextTransparency = 0
+Preset_38.TextXAlignment = Enum.TextXAlignment.Center
+Preset_38.TextYAlignment = Enum.TextYAlignment.Center
 
 local UICorner_39 = Instance.new("UICorner")
 UICorner_39.Name = "UICorner"
-UICorner_39.Parent = FlySpeed_38
+UICorner_39.Parent = Preset_38
 UICorner_39.CornerRadius = UDim.new(0, 8)
 
-local BottomSeperator_40 = Instance.new("Frame")
-BottomSeperator_40.Name = "Bottom Seperator"
-BottomSeperator_40.Parent = Window_1
-BottomSeperator_40.Size = UDim2.new(1, 0, -0.007604559883475304, 0)
-BottomSeperator_40.Position = UDim2.new(0, 0, 0.5, 0)
-BottomSeperator_40.BackgroundColor3 = Color3.new(0.7568627595901489, 0.7568627595901489, 0.7568627595901489)
-BottomSeperator_40.BackgroundTransparency = 0
-BottomSeperator_40.ZIndex = 1
-BottomSeperator_40.Rotation = 0
-BottomSeperator_40.Visible = true
-BottomSeperator_40.BorderSizePixel = 0
-BottomSeperator_40.AnchorPoint = Vector2.new(0, 0)
+local FlySpeed_40 = Instance.new("TextBox")
+FlySpeed_40.Name = "Fly Speed"
+FlySpeed_40.Parent = BottomGridLayout_27
+FlySpeed_40.Size = UDim2.new(0, 200, 0, 50)
+FlySpeed_40.Position = UDim2.new(0, 0, 0, 0)
+FlySpeed_40.BackgroundColor3 = Color3.new(0, 0, 0)
+FlySpeed_40.BackgroundTransparency = 0
+FlySpeed_40.ZIndex = 1
+FlySpeed_40.Rotation = 0
+FlySpeed_40.Visible = true
+FlySpeed_40.BorderSizePixel = 0
+FlySpeed_40.AnchorPoint = Vector2.new(0, 0)
+FlySpeed_40.Text = ""
+FlySpeed_40.TextSize = 12
+FlySpeed_40.TextColor3 = Color3.new(1, 1, 1)
+FlySpeed_40.Font = Enum.Font.FredokaOne
+FlySpeed_40.TextWrapped = false
+FlySpeed_40.TextScaled = false
+FlySpeed_40.TextTransparency = 0
+FlySpeed_40.TextXAlignment = Enum.TextXAlignment.Center
+FlySpeed_40.TextYAlignment = Enum.TextYAlignment.Center
+FlySpeed_40.PlaceholderText = "Fly Speed"
+FlySpeed_40.ClearTextOnFocus = false
+
+local UICorner_41 = Instance.new("UICorner")
+UICorner_41.Name = "UICorner"
+UICorner_41.Parent = FlySpeed_40
+UICorner_41.CornerRadius = UDim.new(0, 8)
+
+local BottomSeperator_42 = Instance.new("Frame")
+BottomSeperator_42.Name = "Bottom Seperator"
+BottomSeperator_42.Parent = Window_1
+BottomSeperator_42.Size = UDim2.new(1, 0, -0.007604559883475304, 0)
+BottomSeperator_42.Position = UDim2.new(0, 0, 0.5, 0)
+BottomSeperator_42.BackgroundColor3 = Color3.new(0.7568627595901489, 0.7568627595901489, 0.7568627595901489)
+BottomSeperator_42.BackgroundTransparency = 0
+BottomSeperator_42.ZIndex = 1
+BottomSeperator_42.Rotation = 0
+BottomSeperator_42.Visible = true
+BottomSeperator_42.BorderSizePixel = 0
+BottomSeperator_42.AnchorPoint = Vector2.new(0, 0)
 
 local players = game:GetService("Players")
 local runService = game:GetService("RunService")
@@ -537,6 +563,7 @@ _G.noclip = false
 _G.infinjump = false
 _G.anchor = false
 _G.fly = false
+_G.plrESP = false
 
 -- God Mode
 local function toggleGodmode(button)
@@ -895,21 +922,15 @@ end
 -- Activate the feature
 aimHead()
 
-local function preset(window)
-	window.BottomGridLayout.Walkspeed.Text = 500
-	window.BottomGridLayout["Jump Power"].Text = 100
-	local topGridLayout = window.TopGridLayout
-	toggleInfJump(topGridLayout["Inf Jump"])
-	toggleNoclip(topGridLayout["Noclip"])
-end
-
 --// FLY VARIABLES
 local flying = false
 local speed = 50
 local bodyGyro
 local bodyVelocity
 
-local function toggleFly()
+local function toggleFly(button)
+	_G.fly = not _G.fly
+	button.BackgroundColor3 = _G.fly and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
 	local player = game.Players.LocalPlayer
 	local character = player.Character
 	if not character then return end
@@ -986,16 +1007,43 @@ local function toggleFly()
 	end
 end
 
---// KEYBIND (E)
-game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
-	if gpe then return end
-	if input.KeyCode == Enum.KeyCode.E then
-		toggleFly()
+local function togglePlrESP(button)
+	_G.plrESP = not _G.plrESP
+	button.BackgroundColor3 = _G.plrESP and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+	local player = game.Players.LocalPlayer
+	local character = player.Character
+	if _G.plrESP then
+		for i, v in game.Players:GetChildren() do
+			if v ~= player then
+				local highlight = Instance.new("Highlight")
+				highlight.Name = "ESP"
+				highlight.Adornee = v.Character
+				highlight.Parent = v.Character
+			end
+		end
+	else
+		for i, v in game.Players:GetChildren() do
+			if v ~= player then
+				if v.Character:FindFirstChild("ESP") then
+					v.Character.ESP:Destroy()
+				end
+			end
+		end
 	end
-end)
+end
 
-local function setFlySpeed(speed)
-	speed = tonumber(speed) or 50
+local function setFlySpeed(flyspeed)
+	speed = tonumber(flyspeed) or 50
+end
+
+local function preset(window)
+	window.BottomGridLayout.Walkspeed.Text = 500
+	window.BottomGridLayout["Jump Power"].Text = 100
+	local topGridLayout = window.TopGridLayout
+	toggleInfJump(topGridLayout["Inf Jump"])
+	toggleNoclip(topGridLayout["Noclip"])
+	toggleFly(topGridLayout["Fly"])
+	setFlySpeed(250)
 end
 
 --// UI Setup
@@ -1110,6 +1158,10 @@ topGridLayout["Anchor"].MouseButton1Click:Connect(function()
 	toggleAnchor(topGridLayout["Anchor"])
 end)
 
+topGridLayout["PlrEsp"].MouseButton1Click:Connect(function()
+	togglePlrESP(topGridLayout["PlrEsp"])
+end)
+
 bottomGridLayout["Teleport"].MouseButton1Click:Connect(function()
 	tpToPlr(bottomGridLayout["Teleport"])
 end)
@@ -1122,6 +1174,10 @@ UIS.InputBegan:Connect(function(inp, gp)
 	if gp then return end
 	if inp.KeyCode == Enum.KeyCode.J then
 		preset(bottomGridLayout.Parent)
+	elseif inp.KeyCode == Enum.KeyCode.L then
+		togglePlrESP(topGridLayout["PlrEsp"])
+	elseif inp.KeyCode == Enum.KeyCode.H then
+		toggleFly(topGridLayout["Fly"])
 	end
 end)
 
