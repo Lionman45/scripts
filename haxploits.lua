@@ -1,5 +1,6 @@
 local gui = Instance.new('ScreenGui')
-gui.Parent = game.Players.LocalPlayer.PlayerGui
+local players = game:GetService("Players")
+gui.Parent = players.LocalPlayer.PlayerGui
 gui.Name = 'MakeScript'
 
 local Window_1 = Instance.new("Frame")
