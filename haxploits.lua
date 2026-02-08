@@ -1,6 +1,7 @@
 local gui = Instance.new('ScreenGui')
 gui.Parent = game:GetService("Players").LocalPlayer.PlayerGui
 gui.Name = 'MakeScript'
+gui.ResetOnSpawn = false
 
 local Window_1 = Instance.new("Frame")
 Window_1.Name = "Window"
@@ -558,6 +559,9 @@ local mouse = player:GetMouse()
 
 local makeScriptGui = game.Players.LocalPlayer.PlayerGui:WaitForChild("MakeScript")
 
+local offColor = Color3.fromRGB(59, 59, 59)
+local onColor = Color3.fromRGB(18, 59, 0)
+
 _G.godmode = false
 _G.noclip = false
 _G.infinjump = false
@@ -568,7 +572,7 @@ _G.plrESP = false
 -- God Mode
 local function toggleGodmode(button)
 	_G.godmode = not _G.godmode
-	button.BackgroundColor3 = _G.godmode and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+	button.BackgroundColor3 = _G.godmode and onColor or offColor
 
 	if _G.godmode then
 		local humanoid = char:FindFirstChildOfClass("Humanoid")
@@ -614,7 +618,7 @@ local touchedParts = {}
 
 local function toggleNoclip(button)
 	_G.noclip = not _G.noclip
-	button.BackgroundColor3 = _G.noclip and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+	button.BackgroundColor3 = _G.godmode and onColor or offColor
 
 	if stepConnection then stepConnection:Disconnect() end
 	if ncConnection then ncConnection:Disconnect() end
@@ -649,7 +653,7 @@ end
 -- Inf Jump
 local function toggleInfJump(button)
 	_G.infinjump = not _G.infinjump
-	button.BackgroundColor3 = _G.infinjump and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+	button.BackgroundColor3 = _G.godmode and onColor or offColor
 
 	mouse.KeyDown:Connect(function(k)
 		if _G.infinjump and k:byte() == 32 then
@@ -666,7 +670,7 @@ end
 -- Anchor
 local function toggleAnchor(button)
 	_G.toggleanchor = not _G.toggleanchor
-	button.BackgroundColor3 = _G.toggleanchor and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+	button.BackgroundColor3 = _G.godmode and onColor or offColor
 
 	if _G.toggleanchor then
 		char.HumanoidRootPart.Anchored = true
@@ -930,7 +934,7 @@ local bodyVelocity
 
 local function toggleFly(button)
 	_G.fly = not _G.fly
-	button.BackgroundColor3 = _G.fly and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+	button.BackgroundColor3 = _G.godmode and onColor or offColor
 	local player = game.Players.LocalPlayer
 	local character = player.Character
 	if not character then return end
@@ -1009,7 +1013,7 @@ end
 
 local function togglePlrESP(button)
 	_G.plrESP = not _G.plrESP
-	button.BackgroundColor3 = _G.plrESP and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+	button.BackgroundColor3 = _G.godmode and onColor or offColor
 	local player = game.Players.LocalPlayer
 	local character = player.Character
 	if _G.plrESP then
@@ -1152,7 +1156,7 @@ topGridLayout["Fly"].MouseButton1Click:Connect(function()
 	toggleFly(topGridLayout["Fly"])
 end)
 
-topGridLayout["Give TPtool"].MouseButton1Click:Connect(giveTpTool)
+bottomGridLayout["Give TPtool"].MouseButton1Click:Connect(giveTpTool)
 
 topGridLayout["Anchor"].MouseButton1Click:Connect(function()
 	toggleAnchor(topGridLayout["Anchor"])
@@ -1182,7 +1186,13 @@ UIS.InputBegan:Connect(function(inp, gp)
 end)
 
 runService.RenderStepped:Connect(function()
-	setWalkSpeed(bottomGridLayout["Walkspeed"])
-	setJumpPower(bottomGridLayout["Jump Power"])
-	setFlySpeed(bottomGridLayout["Fly Speed"])
+	task.spawn(function()
+		setWalkSpeed(bottomGridLayout["Walkspeed"])
+	end)
+	task.spawn(function()
+		setJumpPower(bottomGridLayout["Jump Power"])
+	end)
+	task.spawn(function()
+		setFlySpeed(bottomGridLayout["Fly Speed"])
+	end)
 end)
